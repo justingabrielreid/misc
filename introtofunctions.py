@@ -20,7 +20,7 @@ def main():
   
 def tax(bill):
 	#adds 8% tax to a restauraunt bill
-	bill = bill*1.08
+	bill = bill*1.09
 	#print "With tax: %f" % bill 
 	return bill
 
