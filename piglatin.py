@@ -1,17 +1,28 @@
 #!/usr/bin/python
+
+from __future__ import print_function
+
 #pig latin translator 
 
-print 'Welcome to the Pig Latin Translator!' 
+print('Welcome to the Pig Latin Translator!')
 pyg = 'ay'
-original = raw_input("Enter a word: ")
-#the function raw_input accepts a string, prints it and waits for a user to type something and press enter
-#the function isalpha reutrns False if the string has non letter characters 
-if len(original) > 0 and original.isalpha():
-	print original
-	word = original.lower()
-	first = word[0]
-	pygword = word[1:len(original)] + first + pyg
-	print pygword
-else: 
-	print 'empty'
+str = raw_input("Enter a word: ")
 
+# the function raw_str accepts a string, prints it and 
+# waits for a user to type something and press enter
+# the function isalpha reutrns False if the string has 
+# non letter characters 
+print(str)
+if len(str) > 0: # and str.isalpha():
+    for w in str.split():
+        if w.isalpha():
+            word = w.lower()
+            first = word[0]
+            pygword = word[1:len(str)] + first + pyg
+            print(pygword, end=' ')
+        else:
+            print(w, end=' ')
+
+    print('')
+else: 
+    print('empty')
