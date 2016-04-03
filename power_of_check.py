@@ -15,9 +15,9 @@ class Power_of(object):
 			
 
 def main():
-	number = int(raw_input('Enter an integer: '))
-	base = int(raw_input('Enter the base: '))
-	print Power_of(number, base).checker()
+	number = int(input('Enter an integer: '))
+	base = int(input('Enter the base: '))
+	print (Power_of(number, base).checker())
 	
 	
 if __name__ == '__main__':
