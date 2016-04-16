@@ -3,6 +3,16 @@
 import pandas 
 import numpy 
 
+''' 
+File corresponds to the dataset Most-Recent-Cohorts... 
+
+Practicing of my skills with NumPy, Pandas and iPython. 
+The corresponding dataset contains information about many of the major colleges across the United States. Has over 8000 rows and 123 columns. 
+I focues on the University of Arizona. 
+1st Draft of this file will provide a visual representation of the demographics of the undergraduates at the University of Arizona. 
+
+'''
+
 #read in the data from the csv file 
 
 scorecard = pandas.read_csv('Most-Recent-Cohorts-Scorecard-Elements.csv')
