@@ -32,3 +32,7 @@ grep -n -i CGTATAT yeast_chr1_orfs.fa
 #searches for the pattern with the line number and case insensitive options
 #misses the pattern that spands across two lines. 
 
+#viewing and controlling program output 
+cat yeast_chr1_orfs.fa 
+
+
