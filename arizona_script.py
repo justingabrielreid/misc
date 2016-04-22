@@ -48,10 +48,10 @@ print (column_names)
 
 #Then select the columns that match the marker UGDS_race
 
-list_of__ugds_by_race = column_names[86:94]
+list_of_ugds_by_race = column_names[86:94]
 
 #now create a DataFrame matching with the values matching to the columns
-race_breakdown_of_AZ = arizona[list_of__ugds_by_race]
+race_breakdown_of_AZ = arizona[list_of_ugds_by_race]
 
 #Transpose the Dataframe for easier access to data
 race_breakdown_of_AZ = race_breakdown_of_AZ.transpose()
