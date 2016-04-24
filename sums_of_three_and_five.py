@@ -1,4 +1,4 @@
-#!/usr/env python3 
+#!/usr/bin/python3 
 
 #Find the sum of numbers from 3 upto 1000 that are multiples of 3 and 5. 
 
