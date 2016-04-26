@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
 # Distribution / packaging
 .Python
 env/
