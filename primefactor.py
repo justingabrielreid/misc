@@ -3,7 +3,8 @@
 ''' prime factor checker. Given a number, find all of the
 	prime factors of the number and return the largest one. 
 '''
-
+'''
+#currently no ready need to figure out what is going wrong
 def isPrime(nums):
 	primes = []
 	for x in nums:
@@ -25,4 +26,6 @@ def main():
 	else:
 		print ('There are no prime factors for that number')
 if __name__ == '__main__':
-	main()
+    main()
+'''
+
