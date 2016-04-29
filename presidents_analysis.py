@@ -41,8 +41,10 @@ birth_and_death.columns = ['Presidents', 'Birth Year', 'Death Year']
 birth_year = list(birth_and_death['Birth Year'])
 death_year = list(birth_and_death['Death Year'])
 #counter for years that the presidents have lived!
+yearCount = Counter()
 for bday, dday in zip(birth_year, death_year):
 	for year in range(bday, dday):
 		yearCount.update({year})
+
 #maximum number of presidents living in a single year was 18 presidents
 #those years include 1833, 1834, 1835, 1837, 1338, 1839, 1840, 1844,
