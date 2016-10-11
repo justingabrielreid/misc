@@ -14,13 +14,24 @@ STARTING_YEAR = 1890
 WIDTH = 60 
 HEIGHT = 30
 def main():
+    #prompt for input
     name = str(input("Name: "))
     gender = str(input("Gender: "))
-    panel = DrawingPanel(780,570,background = "white")
-    statline = stats_search(name, gender)
+    #function used for static graphic elements in the output
+    panel = static_graphics()
+    #statistics search and related graphics
+    statline = stats_search(name, gender, panel)
     if statline is not None:
-         meanings = meaning_search(name)
-def stats_search(name, gender):
+        #name's meaning search and related graphics
+         meanings = meaning_search(name, panel)
+def static_graphics():
+    #setting window size and background color
+    panel = DrawingPanel(780,570,background = "white")
+    #Grey rectangles
+    panel.canvas.create_rectangle(0,0,780,30, fill = "light gray")
+    panel.canvas.create_rectangle(0,530,780,560, fill = "light gray")
+    return panel
+def stats_search(name, gender, panel):
     """
     Takes in the name and gender and performs a file search for that combo. 
     If that combo is found then the file will output the popularity stats for 
@@ -50,7 +61,7 @@ def stats_search(name, gender):
             return line
     stat_file.close()
 
-def meaning_search(name):
+def meaning_search(name, panel):
     """
     Takes in the entered name and searches a file containing meanings of the names found
     in the previous stats file. This function will only run if the name/gender combination
@@ -63,7 +74,7 @@ def meaning_search(name):
     for line in meanings_file.readlines():
         meaning = line.split(" ")
         if name == meaning[0]:
-            print(line)
+            panel.canvas.create_text(390,16,text = line)
             meanings_file.close()
             return
     meanings_file.close()
